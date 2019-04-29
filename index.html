@@ -29,20 +29,21 @@
         //------------------------------------
         //where are your start modules
         $vm.start_modules=[
-            "$H/0/frame.html",  //app frame work
+            "$H/frame.html",  //app frame work
         ]
         for(i in $vm.start_modules) $vm.start_modules[i]=$vm.start_modules[i].replace('$H',$vm.hosting_path);
         //------------------------------------
         //modules used immediately
         $vm.module_list={
             //you can add modules here directly
-            "home":	        {url:"$H/0/home.html",router:1},
-            "frame":	    {url:"$H/0/frame.html",sys:1},
-            "app":	        {url:"$H/0/app.html"},
-            "header":	    {url:"$H/0/header.html"},
-            "footer":	    {url:"$H/0/footer.html"},
-            "q1":           {url:"$H/q/q1.html"},
-            "no-thanks":    {url:"$H/n/no-thanks.html"},
+            "home":	        {url:"$H/home.html",router:1},
+            "frame":	    {url:"$H/frame.html",sys:1},
+            "app":	        {url:"$H/app.html"},
+            "header":	    {url:"$H/header.html"},
+            "footer":	    {url:"$H/footer.html"},
+            "q1":           {url:"$H/modules/q1.html"},
+            "not_elig":     {url:"$H/modules/not_elig.html"},
+            "no-thanks":    {url:"$H/modules/no-thanks.html"},
         };
         for(p in $vm.module_list) $vm.module_list[p].url=$vm.module_list[p].url.replace('$H',$vm.hosting_path);
         //for(p in $vm.module_list) $vm.module_list[p].url=$vm.module_list[p].url.replace('$M',$vm.m_path);
@@ -50,7 +51,7 @@
         //all other modules, used on demand 
         $vm.app_modules=[
             //you can add a js file that will add mmodules to the $vm.module_list
-            "$H/cleverlights.js",
+            "$H/components/cleverlights.js",
         ]
         for(i in $vm.app_modules) $vm.app_modules[i]=$vm.app_modules[i].replace('$H',$vm.hosting_path);
         //------------------------------------
