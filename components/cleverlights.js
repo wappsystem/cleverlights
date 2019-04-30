@@ -15,4 +15,5 @@
     }
     url_replace(modules,"","$H","https://wappsystem.github.io/cleverlights/modules","http://127.0.0.1:8000/wappsystem/cleverlights/modules");
     //-------------------------------------------------------------------------------------
+    for(m in modules){$vm.module_list[m]=modules[m];}
 })();
