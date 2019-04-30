@@ -1,10 +1,15 @@
 <div id=D__ID>
         <form id="F__ID">
-            <div id=page1__ID style="height:100px;background-color:#efefef;text-align:center;" >
-                <div style="padding-top:40px;">
-                    <span style="color:#888">1 of 4</span> <b>Cleverlights Pre-screening questions</b>
-                </div>
-            </div>    
+                <div  id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;" >
+                        <div class="col-lg-1 col-sm-0 ">
+                        </div>
+                          <div class="col-lg-9 col-sm-12 text-center">
+                          <span style="color:#888">1 of 4</span> <b>Cleverlights Pre-screening questions</b>
+                      
+                        </div>
+                        <div class="col-lg-1 col-sm-0 ">
+                          </div>
+                        </div>    
             <div id=quest1__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
                     <div class="form-group">
                 <div class="row">
@@ -107,11 +112,16 @@
                 </div>
             </div>
         </div>
-    <div id=page2__ID style="height:100px;background-color:#efefef;text-align:center;" >
-        <div style="padding-top:40px;">
-            <span style="color:#888">2 of 4</span> <b>Insomnia Severity Index</b>
-        </div>
-    </div>    
+        <div  id=page2__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;" >
+                <div class="col-lg-1 col-sm-0 ">
+                </div>
+                  <div class="col-lg-10 col-sm-12 text-center">
+                  <span style="color:#888">2 of 4</span> <b>Insomnia Severity Index</b>
+              
+                </div>
+                <div class="col-lg-1 col-sm-0 ">
+                  </div>
+                </div>    
     <div id=quest2__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
         <div class="form-group">
             <h4>1. Please rate the CURRENT (i.e. LAST 2 WEEKS) SEVERITY of your insomnia problem(s).</h4>
@@ -261,14 +271,19 @@
            </div>
          </div>
          <div style="text-align:right">
-         <img id=next3__ID src="components/images/button_next.png" style="cursor:pointer">
+        <button type="button" id="next3__ID" style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif" class="btn btn-success btn-lg">Next</button>
         </div>
         </div>
-        <div id=page3__ID style="height:100px;background-color:#efefef;text-align:center;" >
-        <div style="padding-top:40px;">
-            <span style="color:#888">3 of 4</span> <b>Pittsburgh Sleep Quality Index</b>
-        </div>
-    </div>    
+        <div  id=page3__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;" >
+            <div class="col-lg-1 col-sm-0 ">
+                </div>
+                  <div class="col-lg-10 col-sm-12 text-center">
+                  <span style="color:#888">3 of 4</span> <b>Pittsburgh Sleep Quality Index</b>
+              
+                </div>
+                <div class="col-lg-1 col-sm-0 ">
+            </div>
+        </div>    
         <div id=quest3__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
             <div class="form-group">
                 <fieldset class="subquestions">
@@ -978,14 +993,19 @@
                 </div>
             </div>
             <div style="text-align:right">
-                <img id=next4__ID src="components/images/button_next.png" style="cursor:pointer">
+                <button type=button id="next4__ID" style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif" class="btn btn-success btn-lg">Next</button>
                </div>       
         </div>
-         <div id=page4__ID style="height:100px;background-color:#efefef;text-align:center;" >
-            <div style="padding-top:40px;">
-                <span style="color:#888">4 of 4</span> <b>Multivariate Apnea Prediction Index</b>
-            </div>
-        </div>    
+        <div  id=page4__ID class="row  mr-0 ml-0 p-4" style="background-color:#efefef;" >
+                <div class="col-lg-1 col-sm-0 ">
+                    </div>
+                      <div class="col-lg-9 col-sm-12 text-center">
+                      <span style="color:#888">4 of 4</span> <b>Multivariate Apnea Prediction Index</b>
+                  
+                    </div>
+                    <div class="col-lg-1 col-sm-0 ">
+                </div>
+            </div>    
         <div id=quest4__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
             <div class="form-group">
                 <div class="questiongroup ">
@@ -1126,21 +1146,28 @@
                  </div>
               </div>
               <div style="text-align:right">
-                <img id=submit__ID src="components/images/button_submit.png" style="cursor:pointer">
-               </div>       
+                <button type="submit" id="submit__ID" style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif" class="btn btn-success btn-lg">Submit</button>
+            </div> 
         </div>
         </form>
     <script>
         function F__ID(){
-            $('#D__ID').on('load',function(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/f/form.01.js
+            //-------------------------------------
+            m.default_load=m.load;
+            m.load=function(){
+                m.default_load();
+                $('#D__ID').scrollTop(0);
+                $(window).scrollTop(0);
                 $('#page3__ID').hide();
                 $('#quest3__ID').hide();
                 $('#page4__ID').hide();
                 $('#quest4__ID').hide();
-            })
+            }
             $('#next3__ID').on('click',function(){
-/*                if($("input[name='location']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 1.' ); return;}
-                if($("input[name='age']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 2.' ); return;}
+                if($("input[name='location']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 1.' ); return;}
+/*                if($("input[name='age']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 2.' ); return;}
                 if($("input[name='fluent']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 3.' ); return;}
                 if($("input[name='working']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 4.' ); return;}
                 if($("input[name='working']:checked").val()=='1'){
@@ -1260,23 +1287,16 @@
                 }
                 //-------------------------------------
             });
-            $('#submit__ID').on('click',function(){
-/*                
-                if($("input[name='map_age']").val()==''){$vm.alert('Please answer Page 4 - Age.' ); return;}
-                if($("input[name='gender']:checked").val()==undefined){$vm.alert('Please answer Page 4 - Gender.' ); return;}
-                if($("input[name='weight']").val()==''){$vm.alert('Please answer Page 4 - Weight.' ); return;}
-                if($("input[name='height']").val()==''){$vm.alert('Please answer Page 4 - Height.' ); return;}
-                if($("input[name='MAP_1']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 1.' ); return;}
-                if($("input[name='MAP_2']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 2.' ); return;}
-                if($("input[name='MAP_3']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 3.' ); return;}
-                //$vm.alert('caculate eligibility...');
-*/
-                if(m.prefix==undefined) {$vm.load_module('not_elig','',{});}
-                else $vm.load_module(m.prefix+'not_elig','',{});
-            });
             //-------------------------------------
-            var before_submit=m.before_submit;
-                m.before_submit=function(data,index){
+            m.before_submit=function(data,index){
+/*                if($("input[name='map_age']").val()==''){$vm.alert('Please answer Page 4 - Age.' ); return false;}
+                if($("input[name='gender']:checked").val()==undefined){$vm.alert('Please answer Page 4 - Gender.' ); return false;;}
+                if($("input[name='weight']").val()==''){$vm.alert('Please answer Page 4 - Weight.' ); return false;;}
+                if($("input[name='height']").val()==''){$vm.alert('Please answer Page 4 - Height.' ); return false;;}
+                if($("input[name='MAP_1']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 1.' ); return false;;}
+                if($("input[name='MAP_2']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 2.' ); return false;;}
+                if($("input[name='MAP_3']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 3.' ); return false;;}
+                //-------------------------------------
                 var age='';age=$("#D__ID input[name=map_age]").val();
                 var height='';height=$("#D__ID input[name=height]").val();
                 var weight='';weight=$("#D__ID input[name=weight]").val();
@@ -1304,10 +1324,109 @@
                     }
                 }
                 else data.MAP='DK';
-                return before_submit(data,index);;
+*/                //-------------------------------------
+/*                data.ISI=(parseInt(data.ISI_2)+parseInt(data.ISI_3)+parseInt(data.ISI_4)+parseInt(data.ISI_5)+parseInt(data.ISI_1a)+parseInt(data.ISI_1b)+parseInt(data.ISI_1c)).toString();
+                data.ISI_1=(parseInt(data.ISI_1a)+parseInt(data.ISI_1b)+parseInt(data.ISI_1c)).toString();
+                //-------------------------------------
+                var v1=$("input[name='PSQI1']").val();
+                var v2=$("input[name='PSQI2']").val();
+                var v3=$("input[name='PSQI3']").val();
+                var v4=$("input[name='PSQI4']").val();
+                var v5=$("input[name='PSQI5a']:checked").val();
+                var v6=$("input[name='PSQI5b']:checked").val();
+                var v7=$("input[name='PSQI5c']:checked").val();
+                var v8=$("input[name='PSQI5d']:checked").val();
+                var v9=$("input[name='PSQI5e']:checked").val();
+                var v10=$("input[name='PSQI5f']:checked").val();
+                var v11=$("input[name='PSQI5g']:checked").val();
+                var v12=$("input[name='PSQI5h']:checked").val();
+                var v13=$("input[name='PSQI5i']:checked").val();
+                var v14=$("input[name='PSQI5j']").val();
+                var v15=$("input[name='PSQI5ji']:checked").val();
+                var v16=$("input[name='PSQI6']:checked").val();
+                var v17=$("input[name='PSQI7']:checked").val();
+                var v18=$("input[name='PSQI8']:checked").val();
+                var v19=$("input[name='PSQI9']:checked").val();
+                var v20=$("input[name='PSQI10']:checked").val();
+                var v21=$("input[name='PSQI10a']:checked").val();
+                var v22=$("input[name='PSQI10b']:checked").val();
+                var v23=$("input[name='PSQI10c']:checked").val();
+                var v24=$("input[name='PSQI10d']:checked").val();
+                var v25=$("input[name='PSQI10e']").val();
+                var v26=$("input[name='PSQI10ei']:checked").val();
+                var vpsqi1=0;
+                if(v4>=7) vpsqi1=0;
+                if(v4<7 && v4>=6) vpsqi1=1;
+                if(v4<6 && v4>=5) vpsqi1=2;
+                if(v4<5) vpsqi1=3;
+                data.PSQIDURAT=vpsqi1.toString();
+                var pqsi5j=0;
+        		if(v14=='') pqsi5j=0; else pqsi5j=v15;
+		        var vpsqi2=parseInt(v6)+parseInt(v7)+parseInt(v8)+parseInt(v9)+parseInt(v10)+parseInt(v11)+parseInt(v12)+parseInt(v13)+parseInt(pqsi5j);
+                if(vpsqi2==0) data.PSQIDISTB="0";
+                if(vpsqi2>=1 && vpsqi2<=9) data.PSQIDISTB="1";
+		        if(vpsqi2>9 && vpsqi2<=18) data.PSQIDISTB="2";
+		        if(vpsqi2>18) data.PSQIDISTB="3";
+                var vpsqi3=0;
+                if(v2>=0 && v2<=15) vpsqi3=0;
+                if(v2>15 && v2<=30) vpsqi3=1;
+                if(v2>30 && v2<=60) vpsqi3=2;
+                if(v2>60) vpsqi3=3;
+                var vpsqi3i=parseInt(vpsqi3)
+                var v5i=parseInt(v5)        
+                if((vpsqi3i+v5i)==0) data.PSQILATEN="0";
+                if((vpsqi3i+v5i)>=1 && (vpsqi3i+v5i)<=2) data.PSQILATEN="1";
+                if((vpsqi3i+v5i)>=3 && (vpsqi3i+v5i)<=4) data.PSQILATEN="2";
+                if((vpsqi3i+v5i)>=5 && (vpsqi3i+v5i)<=6) data.PSQILATEN="3";
+                var v18i=parseInt(v18)
+                var v19i=parseInt(v19)
+                if((v18i+v19i)==0) data.PSQIDAYDYS="0";
+                if((v18i+v19i)>=1 && (v18i+v19i)<=2) data.PSQIDAYDYS="1";
+                if((v18i+v19i)>=3 && (v18i+v19i)<=4) data.PSQIDAYDYS="2";
+                if((v18i+v19i)>=5 && (v18i+v19i)<=6) data.PSQIDAYDYS="3";
+                var startTime = v1;
+                var endTime = v3;
+                var startTimeArray = startTime.split(":");
+                var startInputHrs = parseInt(startTimeArray[0]);
+                var startInputMins = parseInt(startTimeArray[1]);
+                var endTimeArray = endTime.split(":");
+                var endInputHrs = parseInt(endTimeArray[0]);
+                var endInputMins = parseInt(endTimeArray[1]);
+                var startMin = startInputHrs*60 + startInputMins;
+                var endMin = endInputHrs*60 + endInputMins;
+                var result;
+                if (endMin < startMin) {
+                    var minutesPerDay = 24*60; 
+                    result = minutesPerDay - startMin;  // Minutes till midnight
+                    result += endMin; // Minutes in the next day
+                } 
+                else {
+                    result = endMin - startMin;
+                }
+                v4=parseInt(v4)*60*100;
+                var vpsqi4=v4/result;
+                if(vpsqi4>=85) data.PSQIHSE="0";
+                if(vpsqi4<85 && vpsqi4>=75) data.PSQIHSE="1";
+                if(vpsqi4<75 && vpsqi4>=65) data.PSQIHSE="2";
+                if(vpsqi4<65) data.PSQIHSE="3";
+                data.PSQISLPQUAL=v16;
+                data.PSQIMEDS=v17;
+                data.PSQI=( parseInt(data.PSQIDURAT)+ parseInt(data.PSQIDISTB)+ parseInt(data.PSQILATEN)+ parseInt(data.PSQIDAYDYS)+  parseInt(data.PSQIHSE)+  parseInt(data.PSQISLPQUAL)+ parseInt(data.PSQIMEDS)).toString();
+*/               //-------------------------------------
+                return;
             }
             //-------------------------------------
-
+            m.after_insert=function(data,res){
+                if(data.location=='0'){
+                    if(m.prefix==undefined) {$vm.load_module('not_elig','',{});}
+                    else $vm.load_module(m.prefix+'not_elig','',{});
+                }
+                else{
+                    if(m.prefix==undefined) {$vm.load_module('registration-form','',{records:res});}
+                    else $vm.load_module(m.prefix+'registration-form','',{records:res});
+                }
+            }
+            //-------------------------------------
             var set_selected_text=function(i){
              $("#MAP_sel_"+i+"").css('padding-top','10px').css('color','#EA7859');
              switch ($("#D__ID input[name=MAP_"+i+"]:checked").val()) {

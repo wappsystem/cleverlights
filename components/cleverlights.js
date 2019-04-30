@@ -11,7 +11,9 @@
     //-------------------------------------------------------------------------------------
     var modules={
         "recruitment-data":    	        {url:"$H/elig-questions-data.html",Table:"cleverlight-recruitment-record",form_module:"recruitment-form",router:1},
-        "recruitment-form":    	        {url:"$H/elig-questions-form.html",Table:"ccleverlight-recruitment-record"},
+        "recruitment-form":    	        {url:"$H/elig-questions-form.html",Table:"cleverlight-recruitment-record"},
+        "registration-data":    	    {url:"$H/registration-data.html",Table:"cleverlight-registration-record",form_module:"registration-form",router:1},
+        "registration-form":    	    {url:"$H/registration-form.html",Table:"cleverlight-registration-record"},
     }
     url_replace(modules,"","$H","https://wappsystem.github.io/cleverlights/modules","http://127.0.0.1:8000/wappsystem/cleverlights/modules");
     //-------------------------------------------------------------------------------------

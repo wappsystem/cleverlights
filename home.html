@@ -14,7 +14,8 @@
 		<h5>I agree on completing a number of screening questionnaires to determine if I am suitable for the study.</h5>
 		
 		<br>
-		<img id=yes__ID src="components/images/button_agree.png" style="cursor:pointer">&nbsp;&nbsp;<img id=no__ID src="components/images/button_nothanks.png" style="cursor:pointer"><br><br>
+		<button id="yes__ID"  class="btn btn-success btn-lg">I agree</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;<button id="no__ID"  class="btn btn-outline-secondary">No thanks</button><br><br>
 		If you have any questions, please contact us on woolcock.cleverlights@sydney.edu.au or 02 9114 0421<br><br>
 	</div>
 	<script>
@@ -35,6 +36,25 @@
 			margin-top:-100px;
 			padding-top:80px;
 			color:#fff;
+		}
+		#yes__ID{
+			border-radius:2rem;
+			background-color: #13B51F;
+			width:180px;height:60px;
+			font-family: Arial, Helvetica, sans-serif
+		}
+		#no__ID{
+			border-radius:2rem;
+			width:180px;
+			height:60px;
+			font-size:1.2rem;
+			font-family: Arial, Helvetica, sans-serif;
+			border-width: 2px;
+			border-color: #fff;
+			color:#fff;
+		}
+		#no__ID:hover{
+			background-color: rgb(0,0,0,0);
 		}
 	    @media screen and (max-width: 992px) {
 	        #D__ID{
