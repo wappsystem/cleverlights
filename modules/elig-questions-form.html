@@ -1146,9 +1146,66 @@
                  </div>
               </div>
               <div style="text-align:right">
-                <button type="submit" id="submit__ID" style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif" class="btn btn-success btn-lg">Submit</button>
+                <button type="button" id="next5__ID" style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif" class="btn btn-success btn-lg">Submit</button>
             </div> 
         </div>
+        <div  id=page5__ID class="row mr-0 ml-0 p-3" style="background-color:#efefef;" >
+            <div class="col-lg-4 col-sm-0 text-center">
+            </div>
+              <div class="col-lg-4 col-sm-12 text-center">
+              <span style="color:#888">Thank you for completing these questions. Based on the responses you have provided you <b>may be eligible</b> for the research study. <br>We will need to contact you to discuss this over the telephone. Please provide your phone number and e-mail address and we will contact you shortly.</b>
+          
+            </div>
+            <div class="col-lg-4 col-sm-0 text-center">
+              </div>
+            </div>    
+          <div id=quest5__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+              <div class="form-group">
+                  <div class="questiongroup ">
+                      <fieldset class="subquestions">
+                          <label><span class="">First name</span>
+                              <input class="form-control" type="text" name="first_name" >
+                          </label><br>
+                          <label><span class="">Last name</span>
+                              <input class="form-control" type="text" name="last_name" >
+                          </label><br>
+                      </fieldset>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="questiongroup ">
+                      <fieldset class="subquestions">
+                          <label style="width:100%"><span class="">Email Address</span>
+                              <input class="form-control" type="email" name="email" >
+                          </label><br>
+                      </fieldset>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="questiongroup ">
+                      <fieldset class="subquestions">
+                          <label><span class="">Phone number</span>
+                              <input class="form-control" type="text" name="phone" >
+                          </label><br>
+                      </fieldset>
+                  </div>
+              </div>
+          
+               <div style="text-align:right">
+            <button type="submit" id="submit__ID" style="border-radius:2rem;background-color: #13B51F;width:180px;height:60px;font-family: Arial, Helvetica, sans-serif" class="btn btn-success btn-lg">Submit</button>
+            </div>
+            <br>
+            <hr>
+            <div class="text-center">
+            Contact Us
+            <br><br>
+            Phone: (02) 9114 0421<br>
+            Email: woolcock.cleverlights@sydney.edu.au<br><br>
+            Thanks you for your time and effort,<br>
+            <b>The Clever Lights Research Team</b><br>
+          </div>
+          </div>
+          
         </form>
     <script>
         function F__ID(){
@@ -1164,10 +1221,12 @@
                 $('#quest3__ID').hide();
                 $('#page4__ID').hide();
                 $('#quest4__ID').hide();
+                $('#page5__ID').hide();
+                $('#quest5__ID').hide();
             }
             $('#next3__ID').on('click',function(){
                 if($("input[name='location']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 1.' ); return;}
-/*                if($("input[name='age']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 2.' ); return;}
+                if($("input[name='age']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 2.' ); return;}
                 if($("input[name='fluent']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 3.' ); return;}
                 if($("input[name='working']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 4.' ); return;}
                 if($("input[name='working']:checked").val()=='1'){
@@ -1181,13 +1240,15 @@
                 if($("input[name='ISI_3']:checked").val()==undefined){ $vm.alert('Please answer Page 2 - Question 3.' ); return;}
                 if($("input[name='ISI_4']:checked").val()==undefined){ $vm.alert('Please answer Page 2 - Question 4.' ); return;}
                 if($("input[name='ISI_5']:checked").val()==undefined){ $vm.alert('Please answer Page 2 - Question 5.' ); return;}
-*/
+
                 $('#page1__ID').hide();
                 $('#quest1__ID').hide();
                 $('#page2__ID').hide();
                 $('#quest2__ID').hide();
                 $('#page4__ID').hide();
                 $('#quest4__ID').hide();
+                $('#page5__ID').hide();
+                $('#quest5__ID').hide();
                 $('#page3__ID').show();
                 $('#quest3__ID').show();
                 $('#D__ID').scrollTop(0);
@@ -1224,7 +1285,7 @@
                 });
             });
             $('#next4__ID').on('click',function(){
-/*
+
                 if($("input[name='PSQI1']").val()==''){ $vm.alert('Please answer Page 3 - Question 1.' ); return;}
                 if($("input[name='PSQI2']").val()==''){ $vm.alert('Please answer Page 3 - Question 2.' ); return;}
                 if($("input[name='PSQI3']").val()==''){ $vm.alert('Please answer Page 3 - Question 3.' ); return;}
@@ -1251,15 +1312,16 @@
                     if($("input[name='PSQI10d']:checked").val()==undefined){ $vm.alert('Please answer Page 3 - Question 10d.' ); return;}
                     if($("input[name='PSQI10e']").val()!=''){ if($("input[name='PSQI10ei']:checked").val()==undefined){ $vm.alert('Please answer Page 3 - Question 10e-1' ); return;}}
                 }
-*/
                 $('#page1__ID').hide();
                 $('#quest1__ID').hide();
                 $('#page2__ID').hide();
                 $('#quest2__ID').hide();
-                $('#page4__ID').show();
-                $('#quest4__ID').show();
                 $('#page3__ID').hide();
                 $('#quest3__ID').hide();
+                $('#page4__ID').show();
+                $('#quest4__ID').show();
+                $('#page5__ID').hide();
+                $('#quest5__ID').hide();
                 $('#D__ID').scrollTop(0);
                 $(window).scrollTop(0);
                 //-------------------------------------
@@ -1287,17 +1349,28 @@
                 }
                 //-------------------------------------
             });
-            //-------------------------------------
-            m.before_submit=function(data,index){
-/*                if($("input[name='map_age']").val()==''){$vm.alert('Please answer Page 4 - Age.' ); return false;}
+            var map="";
+            var psqidurat="";
+            var psqidistb="";
+            var psqilaten="";
+            var psqidaydys="";
+            var psqihse="";
+            var psqislpqual="";
+            var psqimeds="";
+            var psqi="";
+            var isi="";
+            var isi_1="";
+            var registration=false;
+
+            $('#next5__ID').on('click',function(){
+                if($("input[name='map_age']").val()==''){$vm.alert('Please answer Page 4 - Age.' ); return false;}
                 if($("input[name='gender']:checked").val()==undefined){$vm.alert('Please answer Page 4 - Gender.' ); return false;;}
                 if($("input[name='weight']").val()==''){$vm.alert('Please answer Page 4 - Weight.' ); return false;;}
                 if($("input[name='height']").val()==''){$vm.alert('Please answer Page 4 - Height.' ); return false;;}
                 if($("input[name='MAP_1']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 1.' ); return false;;}
                 if($("input[name='MAP_2']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 2.' ); return false;;}
                 if($("input[name='MAP_3']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 3.' ); return false;;}
-                //-------------------------------------
-                var age='';age=$("#D__ID input[name=map_age]").val();
+               var age='';age=$("#D__ID input[name=map_age]").val();
                 var height='';height=$("#D__ID input[name=height]").val();
                 var weight='';weight=$("#D__ID input[name=weight]").val();
                 var sex=''; sex=$("#D__ID input[name=gender]:checked").val()
@@ -1310,7 +1383,7 @@
                 if($("#D__ID input[name=MAP_3]:checked").val()!=='DK') { v1=parseInt($("#D__ID input[name=MAP_3]:checked").val());answ++;}
                 if(answ>0){
                     if(sex==='' || height==='' || weight==='' || age===''){
-                        data.MAP="age, sex, height or/and weight is/are missing. Can't calculate MAP Score";
+                        map="age, sex, height or/and weight is/are missing. Can't calculate MAP Score";
                     }
                     else{
                         if(sex=='Male') sex=1; else sex=0;
@@ -1320,13 +1393,13 @@
                         var map_index=(v1+v2+v3)/answ;
                         var bmi=weight/height/height*100*100;
                         var x=-8.160+1.229*map_index+0.163*bmi-0.028*map_index*bmi+0.032*age+1.278*sex;
-                        data.MAP=(Math.exp(x)/(1+Math.exp(x))).toFixed(2);
+                        map=(Math.exp(x)/(1+Math.exp(x))).toFixed(2);
                     }
                 }
-                else data.MAP='DK';
-*/                //-------------------------------------
-/*                data.ISI=(parseInt(data.ISI_2)+parseInt(data.ISI_3)+parseInt(data.ISI_4)+parseInt(data.ISI_5)+parseInt(data.ISI_1a)+parseInt(data.ISI_1b)+parseInt(data.ISI_1c)).toString();
-                data.ISI_1=(parseInt(data.ISI_1a)+parseInt(data.ISI_1b)+parseInt(data.ISI_1c)).toString();
+                else map='DK';
+                //-------------------------------------
+                isi=(parseInt($("#D__ID input[name=ISI_2]:checked").val())+parseInt($("#D__ID input[name=ISI_3]:checked").val())+parseInt($("#D__ID input[name=ISI_4]:checked").val())+parseInt($("#D__ID input[name=ISI_5]:checked").val())+parseInt($("#D__ID input[name=ISI_1a]:checked").val())+parseInt($("#D__ID input[name=ISI_1b]:checked").val())+parseInt($("#D__ID input[name=ISI_1c]:checked").val())).toString();
+                isi_1=(parseInt($("#D__ID input[name=ISI_1a]:checked").val())+parseInt($("#D__ID input[name=ISI_1b]:checked").val())+parseInt($("#D__ID input[name=ISI_1c]:checked").val())).toString();
                 //-------------------------------------
                 var v1=$("input[name='PSQI1']").val();
                 var v2=$("input[name='PSQI2']").val();
@@ -1359,14 +1432,14 @@
                 if(v4<7 && v4>=6) vpsqi1=1;
                 if(v4<6 && v4>=5) vpsqi1=2;
                 if(v4<5) vpsqi1=3;
-                data.PSQIDURAT=vpsqi1.toString();
+                psqidurat=vpsqi1.toString();
                 var pqsi5j=0;
         		if(v14=='') pqsi5j=0; else pqsi5j=v15;
 		        var vpsqi2=parseInt(v6)+parseInt(v7)+parseInt(v8)+parseInt(v9)+parseInt(v10)+parseInt(v11)+parseInt(v12)+parseInt(v13)+parseInt(pqsi5j);
-                if(vpsqi2==0) data.PSQIDISTB="0";
-                if(vpsqi2>=1 && vpsqi2<=9) data.PSQIDISTB="1";
-		        if(vpsqi2>9 && vpsqi2<=18) data.PSQIDISTB="2";
-		        if(vpsqi2>18) data.PSQIDISTB="3";
+                if(vpsqi2==0) psqidistb="0";
+                if(vpsqi2>=1 && vpsqi2<=9) psqidistb="1";
+		        if(vpsqi2>9 && vpsqi2<=18) psqidistb="2";
+		        if(vpsqi2>18) psqidistb="3";
                 var vpsqi3=0;
                 if(v2>=0 && v2<=15) vpsqi3=0;
                 if(v2>15 && v2<=30) vpsqi3=1;
@@ -1374,16 +1447,16 @@
                 if(v2>60) vpsqi3=3;
                 var vpsqi3i=parseInt(vpsqi3)
                 var v5i=parseInt(v5)        
-                if((vpsqi3i+v5i)==0) data.PSQILATEN="0";
-                if((vpsqi3i+v5i)>=1 && (vpsqi3i+v5i)<=2) data.PSQILATEN="1";
-                if((vpsqi3i+v5i)>=3 && (vpsqi3i+v5i)<=4) data.PSQILATEN="2";
-                if((vpsqi3i+v5i)>=5 && (vpsqi3i+v5i)<=6) data.PSQILATEN="3";
+                if((vpsqi3i+v5i)==0) psqilaten="0";
+                if((vpsqi3i+v5i)>=1 && (vpsqi3i+v5i)<=2) psqilaten="1";
+                if((vpsqi3i+v5i)>=3 && (vpsqi3i+v5i)<=4) psqilaten="2";
+                if((vpsqi3i+v5i)>=5 && (vpsqi3i+v5i)<=6) psqilaten="3";
                 var v18i=parseInt(v18)
                 var v19i=parseInt(v19)
-                if((v18i+v19i)==0) data.PSQIDAYDYS="0";
-                if((v18i+v19i)>=1 && (v18i+v19i)<=2) data.PSQIDAYDYS="1";
-                if((v18i+v19i)>=3 && (v18i+v19i)<=4) data.PSQIDAYDYS="2";
-                if((v18i+v19i)>=5 && (v18i+v19i)<=6) data.PSQIDAYDYS="3";
+                if((v18i+v19i)==0) psqidaydys="0";
+                if((v18i+v19i)>=1 && (v18i+v19i)<=2) psqidaydys="1";
+                if((v18i+v19i)>=3 && (v18i+v19i)<=4) psqidaydys="2";
+                if((v18i+v19i)>=5 && (v18i+v19i)<=6) psqidaydys="3";
                 var startTime = v1;
                 var endTime = v3;
                 var startTimeArray = startTime.split(":");
@@ -1405,25 +1478,67 @@
                 }
                 v4=parseInt(v4)*60*100;
                 var vpsqi4=v4/result;
-                if(vpsqi4>=85) data.PSQIHSE="0";
-                if(vpsqi4<85 && vpsqi4>=75) data.PSQIHSE="1";
-                if(vpsqi4<75 && vpsqi4>=65) data.PSQIHSE="2";
-                if(vpsqi4<65) data.PSQIHSE="3";
-                data.PSQISLPQUAL=v16;
-                data.PSQIMEDS=v17;
-                data.PSQI=( parseInt(data.PSQIDURAT)+ parseInt(data.PSQIDISTB)+ parseInt(data.PSQILATEN)+ parseInt(data.PSQIDAYDYS)+  parseInt(data.PSQIHSE)+  parseInt(data.PSQISLPQUAL)+ parseInt(data.PSQIMEDS)).toString();
-*/               //-------------------------------------
-                return;
-            }
-            //-------------------------------------
-            m.after_insert=function(data,res){
-                if(data.location=='0'){
+                if(vpsqi4>=85) psqihse="0";
+                if(vpsqi4<85 && vpsqi4>=75) psqihse="1";
+                if(vpsqi4<75 && vpsqi4>=65) psqihse="2";
+                if(vpsqi4<65) psqihse="3";
+                psqislpqual=v16;
+                psqimeds=v17;
+                psqi=( parseInt(psqidurat)+ parseInt(psqidistb)+ parseInt(psqilaten)+ parseInt(psqidaydys)+  parseInt(psqihse)+  parseInt(psqislpqual)+ parseInt(psqimeds)).toString();
+               //-------------------------------------
+                if($("input[name='location']:checked").val()=='0'){
+                    $('#submit__ID').click();
                     if(m.prefix==undefined) {$vm.load_module('not_elig','',{});}
                     else $vm.load_module(m.prefix+'not_elig','',{});
                 }
                 else{
-                    if(m.prefix==undefined) {$vm.load_module('registration-form','',{records:res});}
-                    else $vm.load_module(m.prefix+'registration-form','',{records:res});
+                    registration=true;
+                    $('#page1__ID').hide();
+                    $('#quest1__ID').hide();
+                    $('#page2__ID').hide();
+                    $('#quest2__ID').hide();
+                    $('#page3__ID').hide();
+                    $('#quest3__ID').hide();
+                    $('#page4__ID').hide();
+                    $('#quest4__ID').hide();
+                    $('#page5__ID').show();
+                    $('#quest5__ID').show();
+                    $('#D__ID').scrollTop(0);
+                    $(window).scrollTop(0);
+                }
+
+            });
+            //-------------------------------------
+            m.before_submit=function(data,index){
+                if(registration){
+                    if($("input[name='first_name']").val()==''){$vm.alert('Please fill in First name.' ); return false;}
+                    if($("input[name='last_name']").val()==''){$vm.alert('Please fill in Last name.' ); return false;}
+                    if($("input[name='email']").val()==''){$vm.alert('Please fill in Email address.' ); return false;}
+                    if($("input[name='phone']").val()==''){$vm.alert('Please fill in Phone number.' ); return false;}
+                    data.ISI=isi;
+                    data.ISI_1=isi_1;
+                    data.MAP=map;
+                    data.PSQI=psqi;
+                    data.PSQIDURAT=psqidurat;
+                    data.PSQIDISTB=psqidistb;
+                    data.PSQILATEN=psqilaten;
+                    data.PSQIHSE=psqidaydys;
+                    data.PSQISLPQUAL=psqislpqual;
+                    data.PSQIMEDS=psqimeds;
+                    return true;
+                }
+                else {
+                    data.ISI=isi;
+                    data.ISI_1=isi_1;
+                    data.MAP=map;
+                    data.PSQI=psqi;
+                    data.PSQIDURAT=psqidurat;
+                    data.PSQIDISTB=psqidistb;
+                    data.PSQILATEN=psqilaten;
+                    data.PSQIHSE=psqidaydys;
+                    data.PSQISLPQUAL=psqislpqual;
+                    data.PSQIMEDS=psqimeds;
+                    return true;
                 }
             }
             //-------------------------------------
