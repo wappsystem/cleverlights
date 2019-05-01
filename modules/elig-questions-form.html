@@ -82,7 +82,7 @@
                             <span class="checkmark"></span>No </label>
                     </fieldset>
                 </div>
-                <div class="questiongroup">4.1 If yes, do you work different shifts?
+                <div id=q4-1__ID class="questiongroup">4.1 If yes, do you work different shifts?
                     <fieldset class="pl-4">
                         <label class="radiobuttons ">
                             <input type="radio" name="shift" value="1" >
@@ -629,11 +629,7 @@
                             <input class="form-control" type=text name="PSQI5j" placeholder='reason(s)' >
                         </label><br>
                     </fieldset>
-                </div>
-            </div>
-            <div id=how_often_5__ID>
-                <div class="form-group">
-                    <div class="questiongroup ">
+                    <div id=how_often_5__ID class="questiongroup ">
                         <h4>j-1. How often during the past month have you had trouble sleeping because of this?</h4>
                         <div class='row px-4 pt-3'>
                             <div class="col-sm-12 col-lg-3">
@@ -1223,8 +1219,18 @@
                 $('#quest4__ID').hide();
                 $('#page5__ID').hide();
                 $('#quest5__ID').hide();
+                $('#q4-1__ID').hide();
             }
+            $("#D__ID input[name=working]").on('click', function () {
+                if($("#D__ID input[name=working]:checked").val()=='1'){
+                    $('#q4-1__ID').show(); 
+                }
+                else{
+                    $('#q4-1__ID').hide(); 
+                }
+            });
             $('#next3__ID').on('click',function(){
+                
                 if($("input[name='location']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 1.' ); return;}
                 if($("input[name='age']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 2.' ); return;}
                 if($("input[name='fluent']:checked").val()==undefined){ $vm.alert('Please answer Page 1 - Question 3.' ); return;}
@@ -1312,6 +1318,7 @@
                     if($("input[name='PSQI10d']:checked").val()==undefined){ $vm.alert('Please answer Page 3 - Question 10d.' ); return;}
                     if($("input[name='PSQI10e']").val()!=''){ if($("input[name='PSQI10ei']:checked").val()==undefined){ $vm.alert('Please answer Page 3 - Question 10e-1' ); return;}}
                 }
+                
                 $('#page1__ID').hide();
                 $('#quest1__ID').hide();
                 $('#page2__ID').hide();
@@ -1363,6 +1370,7 @@
             var registration=false;
 
             $('#next5__ID').on('click',function(){
+                
                 if($("input[name='map_age']").val()==''){$vm.alert('Please answer Page 4 - Age.' ); return false;}
                 if($("input[name='gender']:checked").val()==undefined){$vm.alert('Please answer Page 4 - Gender.' ); return false;;}
                 if($("input[name='weight']").val()==''){$vm.alert('Please answer Page 4 - Weight.' ); return false;;}
@@ -1370,6 +1378,7 @@
                 if($("input[name='MAP_1']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 1.' ); return false;;}
                 if($("input[name='MAP_2']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 2.' ); return false;;}
                 if($("input[name='MAP_3']:checked").val()==undefined){ $vm.alert('Please answer Page 4 - Question 3.' ); return false;;}
+                
                var age='';age=$("#D__ID input[name=map_age]").val();
                 var height='';height=$("#D__ID input[name=height]").val();
                 var weight='';weight=$("#D__ID input[name=weight]").val();
