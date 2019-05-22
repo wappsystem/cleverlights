@@ -21,10 +21,10 @@
                 <div class="questiongroup">
                     <fieldset class="pl-4">
                         <label class="radiobuttons ">
-                            <input type="radio" name="location" value="1" >
+                            <input type="radio" name="location" value="Y" >
                             <span class="checkmark"></span>Yes</label>
                         <label class="radiobuttons ">
-                            <input type="radio" name="location" value="0">
+                            <input type="radio" name="location" value="N">
                             <span class="checkmark"></span>No </label>
                     </fieldset>
                 </div>
@@ -39,10 +39,10 @@
                 <div class="questiongroup">
                     <fieldset class="pl-4">
                         <label class="radiobuttons ">
-                            <input type="radio" name="age" value="1" >
+                            <input type="radio" name="age" value="Y" >
                             <span class="checkmark"></span>Yes</label>
                         <label class="radiobuttons ">
-                            <input type="radio" name="age" value="0">
+                            <input type="radio" name="age" value="N">
                             <span class="checkmark"></span>No </label>
                     </fieldset>
                 </div>
@@ -57,10 +57,10 @@
                 <div class="questiongroup">
                     <fieldset class="pl-4">
                         <label class="radiobuttons ">
-                            <input type="radio" name="fluent" value="1" >
+                            <input type="radio" name="fluent" value="Y" >
                             <span class="checkmark"></span>Yes</label>
                         <label class="radiobuttons ">
-                            <input type="radio" name="fluent" value="0">
+                            <input type="radio" name="fluent" value="N">
                             <span class="checkmark"></span>No </label>
                     </fieldset>
                 </div>
@@ -75,20 +75,20 @@
                 <div class="questiongroup">
                     <fieldset class="pl-4">
                         <label class="radiobuttons ">
-                            <input type="radio" name="working" value="1" >
+                            <input type="radio" name="working" value="Y" >
                             <span class="checkmark"></span>Yes</label>
                         <label class="radiobuttons ">
-                            <input type="radio" name="working" value="0">
+                            <input type="radio" name="working" value="N">
                             <span class="checkmark"></span>No </label>
                     </fieldset>
                 </div>
                 <div id=q4-1__ID class="questiongroup">4.1 If yes, do you work different shifts?
                     <fieldset class="pl-4">
                         <label class="radiobuttons ">
-                            <input type="radio" name="shift" value="1" >
+                            <input type="radio" name="shift" value="Y" >
                             <span class="checkmark"></span>Yes</label>
                         <label class="radiobuttons ">
-                            <input type="radio" name="shift" value="0">
+                            <input type="radio" name="shift" value="N">
                             <span class="checkmark"></span>No </label>
                     </fieldset>
                 </div>
@@ -103,10 +103,10 @@
                 <div class="questiongroup">
                     <fieldset class="pl-4">
                         <label class="radiobuttons ">
-                            <input type="radio" name="travel" value="1" >
+                            <input type="radio" name="travel" value="Y" >
                             <span class="checkmark"></span>Yes</label>
                         <label class="radiobuttons ">
-                            <input type="radio" name="travel" value="0">
+                            <input type="radio" name="travel" value="N">
                             <span class="checkmark"></span>No </label>
                     </fieldset>
                 </div>
@@ -308,7 +308,7 @@
                     <h4>2. During the past month, how long (in minutes) has it usually taken you to fall asleep each night?</h4>
                     <fieldset class="">
                         <label><span class="">NUMBER OF MINUTES</span>
-                            <input class="form-control" type="number" min=0 max=480 name="PSQI2" >
+                            <input class="form-control" type="number" min=0 max=200 name="PSQI2" >
                         </label><br>
                     </fieldset>
                 </div>
@@ -1495,7 +1495,7 @@
                 psqimeds=v17;
                 psqi=( parseInt(psqidurat)+ parseInt(psqidistb)+ parseInt(psqilaten)+ parseInt(psqidaydys)+  parseInt(psqihse)+  parseInt(psqislpqual)+ parseInt(psqimeds)).toString();
                //-------------------------------------
-                if($("input[name='location']:checked").val()=='0'){
+                if($("input[name='location']:checked").val()=='N'){
                     $('#submit__ID').click();
                     if(m.prefix==undefined) {$vm.load_module('not_elig','',{});}
                     else $vm.load_module(m.prefix+'not_elig','',{});
