@@ -1013,7 +1013,7 @@
                         <div class="questiongroup ">
                             <fieldset class="">
                                 <label ><span class="">Age (years)</span>
-                                    <input class="form-control" type="number" min=15 max=100 name="map_age" placeholder="" required >
+                                    <input class="form-control" type="number" min=50 max=100 name="map_age" placeholder="" required >
                                 </label>
                             </fieldset>
                             <label ><span class="">Gender</span>
@@ -1186,7 +1186,7 @@
                         <div class="questiongroup ">
                             <fieldset class="subquestions">
                                 <label><span class="">Phone number</span>
-                                    <input class="form-control" type="text" name="phone" >
+                                    <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
                                 </label><br>
                             </fieldset>
                         </div>
@@ -1416,6 +1416,13 @@
                 current_I = I;
                 $(window).scrollTop(0);
             }
+            //-------------------------------------
+            $('#mobileNumber__ID').on('change',function(){
+                var mn=$('#mobileNumber__ID').val();
+                if(mn.length==10){
+                    $('#mobileNumber__ID').val(mn.substring(0,4)+'-'+mn.substring(4,7)+'-'+mn.substring(7,10))
+                }
+            })
             //-------------------------------------
             var set_selected_text=function(i){
                 $("#MAP_sel_"+i+"").css('padding-top','10px').css('color','#EA7859');
