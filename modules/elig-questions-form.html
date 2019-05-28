@@ -298,6 +298,7 @@
                             <h4>Please answer all questions.</h4>
                         </fieldset>
                     </div>
+                    
                     <div class="form-group">
                         <div class="questiongroup ">
                             <h4>1. During the past month, what time have you usually gone to bed at night?</h4>
@@ -1013,7 +1014,7 @@
                         <div class="questiongroup ">
                             <fieldset class="">
                                 <label ><span class="">Age (years)</span>
-                                    <input class="form-control" type="number" min=50 max=100 name="map_age" placeholder="" required >
+                                    <input class="form-control" type="number" min=20 max=100 name="map_age" placeholder="" required >
                                 </label>
                             </fieldset>
                             <label ><span class="">Gender</span>
@@ -1360,7 +1361,8 @@
             m.submit = function (event) {
                 event.preventDefault();
                 if (current_I == N-1) {
-                    if($("input[name='location']:checked").val()=='N'){
+                    var isi=(parseInt($("#D__ID input[name=ISI_2]:checked").val())+parseInt($("#D__ID input[name=ISI_3]:checked").val())+parseInt($("#D__ID input[name=ISI_4]:checked").val())+parseInt($("#D__ID input[name=ISI_5]:checked").val())+parseInt($("#D__ID input[name=ISI_1a]:checked").val())+parseInt($("#D__ID input[name=ISI_1b]:checked").val())+parseInt($("#D__ID input[name=ISI_1c]:checked").val())).toString();
+                    if($("input[name='age']:checked").val()=='N' || isi>15 || parseInt($("#D__ID input[name=map_age]").val())<50) {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if(m.prefix==undefined) {$vm.load_module('not_elig','',{});}
@@ -1383,6 +1385,7 @@
             }
             //---------------------------------------
             $('#D__ID').on('load', function () {
+                $('#submit1__ID').show();
                 $('#q4-1__ID').hide();
                 $('#shift__ID').removeAttr('required');
                 $('#how_often_5__ID').hide();
