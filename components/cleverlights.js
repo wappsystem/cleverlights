@@ -13,7 +13,7 @@
         "recruitment-data":    	        {url:"$H/elig-questions-data.html",Table:"cleverlights-recruitment-record",form_module:"recruitment-form",router:1},
         "recruitment-form":    	        {url:"$H/elig-questions-form.html",Table:"cleverlights-recruitment-record"},
     }
-    url_replace(modules,"","$H","https://cleverlights.com.au/modules","http://127.0.0.1:8000/wappsystem/cleverlights/modules");
+    url_replace(modules,"","$H","https://wappsystem.github.io/local-sleep//modules","http://127.0.0.1:8000/wappsystem/cleverlights/modules");
     //-------------------------------------------------------------------------------------
     for(m in modules){$vm.module_list[m]=modules[m];}
 })();
