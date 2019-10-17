@@ -42,6 +42,7 @@
       //-------------------------------------
       m.default_load=m.load;
       m.load=function(){
+          $('#header').css('opacity','0.8');
           m.default_load();
           $('#D__ID').scrollTop(0);
           $(window).scrollTop(0);
