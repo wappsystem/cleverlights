@@ -1286,8 +1286,8 @@
                 var v25=$("input[name='PSQI10e']").val();
                 var v26=$("input[name='PSQI10ei']:checked").val();
                 var vpsqi1=0;
-                if(v4>=7) vpsqi1=0;
-                if(v4<7 && v4>=6) vpsqi1=1;
+                if(v4>7) vpsqi1=0;
+                if(v4<=7 && v4>=6) vpsqi1=1;
                 if(v4<6 && v4>=5) vpsqi1=2;
                 if(v4<5) vpsqi1=3;
                 psqidurat=vpsqi1.toString();
@@ -1334,7 +1334,7 @@
                 else {
                     result = endMin - startMin;
                 }
-                v4=parseInt(v4)*60*100;
+                v4=parseFloat(v4)*60*100;
                 var vpsqi4=v4/result;
                 if(vpsqi4>=85) psqihse="0";
                 if(vpsqi4<85 && vpsqi4>=75) psqihse="1";
@@ -1351,7 +1351,8 @@
                 data.PSQIDURAT = psqidurat;
                 data.PSQIDISTB = psqidistb;
                 data.PSQILATEN = psqilaten;
-                data.PSQIHSE = psqidaydys;
+                data.PSQIHSE = psqihse;
+                data.PSQIDAYDYS = psqidaydys;
                 data.PSQISLPQUAL = psqislpqual;
                 data.PSQIMEDS = psqimeds;
                 return true;
@@ -1362,7 +1363,7 @@
                 event.preventDefault();
                 if (current_I == N-1) {
                     var isi=(parseInt($("#D__ID input[name=ISI_2]:checked").val())+parseInt($("#D__ID input[name=ISI_3]:checked").val())+parseInt($("#D__ID input[name=ISI_4]:checked").val())+parseInt($("#D__ID input[name=ISI_5]:checked").val())+parseInt($("#D__ID input[name=ISI_1a]:checked").val())+parseInt($("#D__ID input[name=ISI_1b]:checked").val())+parseInt($("#D__ID input[name=ISI_1c]:checked").val())).toString();
-                    if($("input[name='age']:checked").val()=='N' || isi>=15 || parseInt($("#D__ID input[name=map_age]").val())<50 || $("input[name='shift']:checked").val()=='Y' || $("input[name='location']:checked").val()=='N') {
+                    if($("input[name='age']:checked").val()=='N' || isi>=15 || parseInt($("#D__ID input[name=map_age]").val())<50 || $("input[name='shift']:checked").val()=='Y' || $("input[name='location']:checked").val()=='N' || $("input[name='fluent']:checked").val()=='N' || $("input[name='travel']:checked").val()=='Y' ) {
                         $('#F__ID *').removeAttr('disabled');
                         old_submit(event);
                         if(m.prefix==undefined) {$vm.load_module('not_elig','',{});}
