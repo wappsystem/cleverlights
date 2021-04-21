@@ -1364,13 +1364,13 @@
                 }
             })
             //-- PSQI ---------------------------
-            $("#D__ID #hh__ID").on('click', function () {
+            $("#D__ID #hh__ID").on('change', function () {
                 $("input[name='PSQI1']").val( calc_time())
             });
-            $("#D__ID #mm__ID").on('click', function () {
+            $("#D__ID #mm__ID").on('change', function () {
                 $("input[name='PSQI1']").val( calc_time())
             });
-            $("#D__ID #ap__ID").on('click', function () {
+            $("#D__ID #ap__ID").on('change', function () {
                 $("input[name='PSQI1']").val( calc_time())
             });
             calc_time=function(){
@@ -1383,13 +1383,13 @@
                 console.log("PSQI1: "+hh+':'+mm);
                 return hh+':'+mm
             }
-            $("#D__ID #hh1__ID").on('click', function () {
+            $("#D__ID #hh1__ID").on('change', function () {
                 $("input[name='PSQI3']").val( calc_time1())
             });
-            $("#D__ID #mm1__ID").on('click', function () {
+            $("#D__ID #mm1__ID").on('change', function () {
                 $("input[name='PSQI3']").val( calc_time1())
             });
-            $("#D__ID #ap1__ID").on('click', function () {
+            $("#D__ID #ap1__ID").on('change', function () {
                 $("input[name='PSQI3']").val( calc_time1())
             });
             calc_time1=function(){
